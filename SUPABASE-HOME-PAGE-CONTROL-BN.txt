@@ -1,0 +1,17 @@
+AFTER — Home Page Responsive Controls Setup (Bangla)
+
+১) ZIP extract করে website-এর updated files GitHub-এ upload করুন। আগের files replace করার আগে backup রাখুন।
+২) Supabase Dashboard → SQL Editor → New query খুলুন।
+৩) ZIP-এর SUPABASE-HOME-PAGE-CONTROL.sql ফাইলের সম্পূর্ণ SQL copy করে Run করুন।
+৪) Supabase-এর public.admin_users টেবিলে আপনার admin Auth user-এর user_id থাকতে হবে। Customer Inbox থেকে admin account দিয়ে sign in করুন।
+৫) Admin page → Home Page খুলুন। Mobile, Tablet/iPad ও PC-এর জন্য আলাদা image ও text দিন।
+৬) Image upload হলে শেষে SAVE ALL HOME PAGE SETTINGS চাপুন। Text/link বদলালেও এই Save button চাপতে হবে।
+৭) GitHub Pages-এ files publish হওয়ার পর website refresh করুন; cache থাকলে Ctrl+F5 করুন।
+
+নোট:
+- Mobile-এর default fallback image: assets/hero-mobile.jpg
+- PC-এর আগের hero image assets/hero-visual.jpg-ই রাখা হয়েছে।
+- Tablet-এর image না দিলে PC image fallback হিসেবে ব্যবহার হবে।
+- Image সর্বোচ্চ 8 MB এবং JPG/PNG/WEBP/GIF/AVIF হতে হবে।
+- SQL শুধু shop_settings row/table এবং shop-assets bucket/policies নিশ্চিত করে; existing product/order/message data delete বা replace করে না।
+- Supabase Storage upload permission-এর জন্য public.admin_users table-এ signed-in admin account-এর user_id থাকা আবশ্যক।

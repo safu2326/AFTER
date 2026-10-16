@@ -1,0 +1,21 @@
+AFTER WEBSITE — Product Categories (Bangla)
+
+Ki add hoyeche
+- Admin > Products section-er moddhe alada Product categories manager.
+- Nijer category add, naam edit, delete kora jabe.
+- Product-er Category field dropdown hoyeche.
+- Category filter diye product list chhoto kore dekha jabe.
+- SQL run korle existing products table-er category name-gulo category list-e import hobe.
+
+Setup (important)
+1. Supabase Dashboard > SQL Editor > New query khulun.
+2. Ei folder-er SUPABASE-PRODUCT-CATEGORIES.sql file-er puro SQL paste kore Run korun.
+3. ZIP-er after-website folder-er website files GitHub Pages repository-te upload/replace korun. Existing directory structure eki rakhun.
+4. Admin page reload korun. Category add/edit/delete ebong product save korar jonno ager moto authorized Supabase admin account diye Customer Inbox/Cloud Inbox-e sign in thakte hobe.
+
+Compatibility / safety
+- Existing public.products table ba product ID change kora hoyni.
+- Existing public.products.category column text hisebei thakbe; tai current product rows/storefront query change korar dorkar nei.
+- Existing storefront Categories section-er shop-display settings change kora hoyni; eta Product categories theke alada.
+- Category delete korle oi category-r product-gulo "Uncategorized" hisebe update kore SAVE PRODUCTS-er maddhome Supabase-e save korar chesta korbe. Tai delete korar age confirmation dekhabe.
+- SQL policy admin_users table ebong existing admin authorization pattern use kore. SQL run korar age database backup rakha bhalo.

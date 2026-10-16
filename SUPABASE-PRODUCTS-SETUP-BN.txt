@@ -1,0 +1,57 @@
+AFTER WEBSITE — Supabase Products Setup (Bangla)
+
+Ei ZIP-er after-website folder-e updated admin.html, supabase-products.js ebong supabase-products-setup.sql ache.
+
+STEP 1 — SQL setup
+1. Supabase Dashboard > SQL Editor > New query.
+2. supabase-products-setup.sql file-er shob SQL paste kore Run korun.
+3. SQL table-er existing column names screenshot-er moto thakte hobe: id, created_at, name, category, price, old_price, tag, image, description, is_best_seller, is_new_arrival, client_id.
+4. Storage > Buckets-e product-images bucket public hisebe thakbe.
+
+STEP 2 — Admin account authorize
+1. Supabase > Authentication > Users theke admin email/password user-er UUID copy korun.
+2. SQL Editor-e eta run korun (UUID replace korben):
+   insert into public.admin_users(user_id) values ('PASTE-ADMIN-USER-UUID-HERE') on conflict do nothing;
+3. Admin page-er Customer Inbox/Cloud Inbox area diye oi Supabase email/password diye sign in korun. Product save/upload-er jonno oi authenticated session thakte hobe.
+
+STEP 3 — GitHub Pages update
+1. ZIP extract korun.
+2. GitHub repository-r root-e after-website folder-er vitore thaka website files upload/replace korun. Jodi repository-r root-e age index.html chilo, index.html shoho shob updated file root-e rakhben; after-website namer extra nested folder-er vitore rekhe diben na.
+3. supabase-config.js-e apnar project URL ebong publishable key already ache. Secret/service_role key kokhono frontend-e rakhben na.
+4. GitHub Pages deploy howa por hard refresh korun.
+
+STEP 4 — Product save/upload
+1. Admin page khulun, Customer Inbox/Cloud Inbox-e Supabase admin diye sign in korun.
+2. Products tab-e product name/category/price/old price/tag/description edit korun.
+3. Image file select korle seta Supabase Storage-er product-images bucket-e upload hobe. Upload complete toast dekhle SAVE PRODUCTS click korun.
+4. Visitor page-er Shop/Home/Product/Search/Categories page cloud products fetch kore update dekhabe. Table empty thakle local default product list preserve hobe; prothom SAVE PRODUCTS click-e existing admin product list Supabase-e insert/upsert hobe.
+
+Important:
+- Website public product list read korte pare, kintu product edit/upload-er jonno authenticated admin_users membership lage.
+- Price column numeric dhore neya hoyeche; website-er ৳/comma formatting remove kore database-e number save hoy.
+- Existing customer messages/orders/content-er table modify kora hoyni.
+- Product image file limit 8 MB; JPEG/PNG/WebP/GIF/AVIF supported.
+- Ei setup SQL run korar age existing products table-er column types/constraints-er sathe mil ache kina check korun. Jodi id UUID na hoy ba client_id required FK hoy, amake schema screenshot/definition din—ID handling adjust korte hobe.
+
+
+গুরুত্বপূর্ণ Fix (Save failed: invalid input syntax for type bigint):
+আপনার products.id কলাম bigint, তাই Website থেকে UUID-কে id হিসেবে পাঠানো যাবে না। আপডেট করা admin.html এখন id বাদ দিয়ে client_id দিয়ে Upsert করে। SQL Editor-এ supabase-products-setup.sql আবার Run করুন যাতে client_id-এর unique index তৈরি হয়। আগে থেকে products টেবিলে একই non-null client_id একাধিকবার থাকলে index তৈরি হওয়ার আগে duplicates ঠিক করতে হবে। Storage-এ আগে Upload হওয়া image ফাইলগুলো থাকবে; সেগুলো মুছতে হবে না।
+
+
+IMPORTANT FIX (10 Oct 2026):
+Shop/product/search/cart/checkout pages must load the Supabase JS library and
+supabase-config.js before store-data.js and supabase-products.js. Without those
+scripts, the cloud-sync helper has no Supabase client and the visitor device
+continues showing its old local/default product images.
+After uploading this ZIP, replace the corresponding files in the GitHub Pages
+repository root and wait for deployment. Then hard-refresh the shop page.
+
+
+VISITOR PAGE SCRIPT CHECK (10 Oct 2026): index.html and categories.html also load the Supabase product sync. Confirm the CDN, supabase-config.js, store-data.js and supabase-products.js requests return successfully after deployment. This package has not been live-tested against your Supabase policies/browser; test with a single product before bulk edits.
+
+
+MULTI-IMAGE GALLERY FIX:
+1) Supabase Dashboard > SQL Editor খুলুন।
+2) SUPABASE-MULTI-IMAGE-MIGRATION.sql ফাইলের SQL একবার Run করুন। এটি শুধু products টেবিলে images JSONB column যোগ করে এবং পুরোনো image সংরক্ষণ করে; অন্য column বা connection পরিবর্তন করে না।
+3) এই ZIP থেকে after-website ফাইলগুলো GitHub repository-তে আপলোড/replace করুন।
+4) Admin > Products-এ প্রতিটি Gallery image slot-এ URL দিন অথবা image upload করুন, তারপর SAVE PRODUCTS চাপুন।

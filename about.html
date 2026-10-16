@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111113"><title>About — AFTER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+<div class="grain"></div><div class="progress" id="progress"></div>
+<header class="about-nav">
+  <a class="about-brand" href="index.html"><svg class="brand-mark home-logo-mark" viewBox="0 0 54 58" aria-hidden="true"><path d="M5 49 25 11 31 2 35 2 35 9 45 42Q47 48 53 49L53 52Q40 54 34 46L27 21 14 48Q11 53 5 52Z" fill="currentColor"/><path d="M4 49H15" stroke="currentColor" stroke-width="1.5"/></svg><span id="brandName">AFTER</span><sup>®</sup></a>
+  <nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="categories.html">Categories</a><a href="blog.html">Blog</a><a class="active" href="about.html">About</a></nav>
+  <a class="nav-contact" id="navContact" href="mailto:safu2326@gmail.com">CONTACT ↗</a>
+</header>
+<main>
+<section class="about-hero">
+ <div class="hero-copy reveal"><div class="eyebrow"><span></span><b id="aboutEyebrow"></b></div><h1 id="aboutTitle"></h1><p id="aboutIntro"></p><a class="hero-link magnetic" href="#story">ENTER THE STORY <i>↘</i></a></div>
+ <div class="hero-visual reveal" data-depth="0.08"><div class="visual-ring ring-a"></div><div class="visual-ring ring-b"></div><div class="visual-card"><img id="aboutVisual" src="assets/about-character.svg" alt="AFTER character artwork"><div class="visual-label" id="visualLabel">AFTER / CHARACTER 01</div><div class="visual-orbit"></div></div><div class="float-note note-a">CURATED<br><strong>NOT CROWDED.</strong></div><div class="float-note note-b">01 — 03<br><strong>THE HUMAN SIDE</strong></div></div>
+</section>
+<div class="marquee"><div>LESS NOISE <b>✳</b> MORE CHARACTER <b>✳</b> BETTER THINGS <b>✳</b> WHAT'S NEXT <b>✳</b> LESS NOISE <b>✳</b> MORE CHARACTER <b>✳</b></div></div>
+<section class="story-section" id="story">
+ <div class="section-kicker reveal">01 / WHY AFTER</div><div class="story-grid">
+  <div class="story-title reveal"><h2 id="storyTitle"></h2><div class="tiny-line"></div></div>
+  <div class="story-text reveal"><p id="storyText"></p><p class="dropcap">A</p></div>
+ </div>
+ <div class="manifesto reveal"><span>OUR MANIFESTO</span><h3 id="manifesto"></h3><div class="manifesto-mark">↗</div></div>
+</section>
+<section class="numbers-section">
+ <div class="section-kicker reveal">02 / THE AFTER MINDSET</div>
+ <div class="numbers-grid">
+  <div class="number-card reveal"><strong id="statOne"></strong><span id="statOneLabel"></span></div>
+  <div class="number-card dark reveal"><strong id="statTwo"></strong><span id="statTwoLabel"></span></div>
+  <div class="number-card reveal"><strong id="statThree"></strong><span id="statThreeLabel"></span></div>
+ </div>
+</section>
+<section class="contact-section reveal" id="contact">
+ <div class="contact-orb"></div><div class="contact-copy"><div class="section-kicker">03 / SAY HELLO</div><h2 id="contactTitle"></h2><p id="contactText"></p><a class="email" id="contactEmail" href="mailto:safu2326@gmail.com"></a></div><div class="contact-side"><span>AFTER / OPEN CHANNEL</span><i>↗</i></div>
+</section>
+</main>
+<footer class="about-footer"><a href="index.html" class="about-brand"><svg class="brand-mark home-logo-mark" viewBox="0 0 54 58" aria-hidden="true"><path d="M5 49 25 11 31 2 35 2 35 9 45 42Q47 48 53 49L53 52Q40 54 34 46L27 21 14 48Q11 53 5 52Z" fill="currentColor"/><path d="M4 49H15" stroke="currentColor" stroke-width="1.5"/></svg><span id="footerBrand">AFTER</span></a><span>OBJECTS FOR WHAT'S NEXT.</span><span>© AFTER 2026</span><a id="footerMail" href="mailto:safu2326@gmail.com">EMAIL ↗</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="store-data.js"></script><script>if(window.afterSupabase){window.afterSupabase.from("site_content").select("content").eq("content_key","about_page").maybeSingle().then(({data,error})=>{if(!error&&data?.content){const S=getAfterStore();S.about={...(S.about||{}),...data.content};saveAfterStore(S);document.getElementById("aboutEyebrow").textContent=S.about.eyebrow||"";document.getElementById("aboutTitle").textContent=S.about.title||"";document.getElementById("aboutIntro").textContent=S.about.intro||"";document.getElementById("storyTitle").textContent=S.about.storyTitle||"";document.getElementById("storyText").textContent=S.about.storyText||"";document.getElementById("manifesto").textContent=S.about.manifesto||"";document.getElementById("contactTitle").textContent=S.about.contactTitle||"";document.getElementById("contactText").textContent=S.about.contactText||"";const e=S.about.email||"safu2326@gmail.com";document.getElementById("contactEmail").textContent=e;document.getElementById("contactEmail").href="mailto:"+e;document.getElementById("footerMail").href="mailto:"+e;document.getElementById("navContact").href="mailto:"+e;document.getElementById("visualLabel").textContent=S.about.visualLabel||"AFTER / CHARACTER 01";if(S.about.visual)document.getElementById("aboutVisual").src=S.about.visual;["statOne","statTwo","statThree","statOneLabel","statTwoLabel","statThreeLabel"].forEach(k=>document.getElementById(k).textContent=S.about[k]||"");}})}</script><script src="about.js"></script>
+</body></html>

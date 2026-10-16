@@ -1,0 +1,260 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4efe8"><title>Product — AFTER</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet"><style>
+:root{--bg:#f4efe8;--paper:#fffdf9;--ink:#171719;--muted:#77716b;--line:rgba(23,23,25,.13);--accent:#b9824c;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden}button{font:inherit}.shell{width:min(1380px,92vw);margin:auto}.announcement{height:31px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:.17em;color:#77716a;text-transform:uppercase}.header{height:82px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line);position:relative;z-index:10}.brand{display:flex;align-items:center;gap:10px;width:max-content;color:var(--ink);text-decoration:none}.mark{width:31px;height:36px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--bg);font:italic 20px Georgia}.brand-name{font-size:13px;letter-spacing:.4em}.nav{display:flex;gap:31px;font-size:11px;font-weight:600}.nav a{color:inherit;text-decoration:none;position:relative;padding:10px 0}.nav a:after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:var(--ink);transform:scaleX(0);transition:.25s}.nav a:hover:after{transform:scaleX(1)}.actions{display:flex;justify-content:flex-end;gap:15px}.action{border:0;background:none;text-decoration:none;color:inherit;font-size:19px;padding:7px}.bag{border:1px solid var(--line);border-radius:999px;padding:10px 14px;text-decoration:none;color:inherit;font-size:10px;letter-spacing:.08em}.count{display:inline-grid;place-items:center;background:var(--ink);color:#fff;width:18px;height:18px;border-radius:50%;font-size:8px;margin-left:4px}.crumbs{padding:22px 0;color:#89827b;font-size:9px;letter-spacing:.13em}.crumbs a{text-decoration:none;color:inherit}.product-detail{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;padding:8px 0 100px}.gallery{position:relative}.main-media{height:650px;border-radius:25px;background:#e7e0d7;overflow:hidden;position:relative;isolation:isolate;cursor:zoom-in;box-shadow:0 28px 65px rgba(47,39,31,.08);transition:transform .45s ease;animation:productFrameShadow 4.8s ease-in-out infinite}.main-media:hover{transform:translateY(-2px)}.main-media img{cursor:zoom-in;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .55s ease}.main-media:hover img{transform:scale(1.018);filter:saturate(1.025)}.main-media:before{content:'';position:absolute;inset:-25%;background:radial-gradient(circle at 55% 45%,rgba(255,255,255,.5),transparent 45%);animation:pulse 6s ease-in-out infinite}.main-media img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;animation:imageIn .8s ease both;cursor:zoom-in;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .55s ease}.main-media:hover img{transform:scale(1.018);filter:saturate(1.025)}.thumbs{display:flex;gap:10px;margin-top:12px}.thumb{width:76px;height:76px;border:1px solid var(--line);background:#eee4da;border-radius:12px;overflow:hidden;padding:0;cursor:pointer;opacity:.65;transition:.25s}.thumb.active,.thumb:hover{opacity:1;border-color:var(--ink);transform:translateY(-2px)}.thumb img{width:100%;height:100%;object-fit:cover}.floating-note{position:absolute;z-index:2;top:25px;left:25px;background:rgba(255,253,249,.75);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);padding:11px 14px;border-radius:999px;font-size:8px;letter-spacing:.14em;box-shadow:0 15px 35px rgba(0,0,0,.08)}.info{padding:35px 0}.tag{font-size:9px;letter-spacing:.2em;color:#857d75}.info h1{font:500 clamp(46px,5vw,72px)/.92 var(--serif);letter-spacing:-.06em;margin:14px 0 15px}.category{font-size:10px;color:#89817a;letter-spacing:.13em;text-transform:uppercase}.rating{display:flex;align-items:center;gap:10px;margin:18px 0;color:#4c4742;font-size:11px}.stars{letter-spacing:3px;color:#9c713d}.description{font-size:13px;line-height:1.75;color:#716b64;max-width:500px}.price{font-size:28px;font-weight:700;margin:28px 0 8px}.old{font-size:13px;color:#a19a93;text-decoration:line-through;margin-left:8px}.feature-title{font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin:30px 0 13px}.features{margin:0;padding:0 0 0 18px;color:#65605b;font-size:12px;line-height:2}.qty-row{display:flex;align-items:center;justify-content:space-between;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:9px;letter-spacing:.16em}.qty-control{display:flex;align-items:center;gap:15px;border:1px solid var(--line);border-radius:999px;padding:5px 8px}.qty-control button{width:28px;height:28px;border:0;border-radius:50%;background:transparent;cursor:pointer;font-size:17px}.qty-control strong{font-size:11px;min-width:18px;text-align:center}.buy{width:100%;border:0;background:var(--ink);color:white;padding:17px 20px;margin-top:30px;font-size:10px;letter-spacing:.16em;cursor:pointer;transition:.3s;box-shadow:0 14px 28px rgba(23,23,25,.15)}.buy:hover{transform:translateY(-3px);box-shadow:0 20px 35px rgba(23,23,25,.22)}.add{width:100%;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:16px 20px;margin-top:10px;font-size:10px;letter-spacing:.16em;cursor:pointer;transition:.3s}.add:hover{background:#fff}.service-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px solid var(--line);margin-top:35px;padding-top:22px}.service{font-size:9px;color:#79726b;line-height:1.5}.service strong{display:block;color:var(--ink);margin-bottom:5px}.toast{position:fixed;z-index:30;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:13px 19px;border-radius:999px;font-size:10px;pointer-events:none;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}.related{padding:0 0 100px}.related h2{font:500 38px var(--serif)}.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.related-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:.3s}.related-card:hover{transform:translateY(-5px)}.related-card img{width:100%;height:230px;object-fit:cover}.related-card div{padding:14px}.related-card small{color:#8a837b;font-size:9px}.related-card strong{display:block;margin-top:6px;font-size:12px}@keyframes imageIn{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:scale(1)}}@keyframes pulse{50%{transform:scale(1.08);opacity:.7}}@keyframes productFrameShadow{0%,100%{box-shadow:0 24px 54px rgba(47,39,31,.07)}50%{box-shadow:0 34px 76px rgba(47,39,31,.16)}}.info{animation:detailRise .75s .08s both}.crumbs{animation:detailRise .55s both}.gallery{animation:detailRise .7s both}@keyframes detailRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.image-lightbox{position:fixed;inset:0;z-index:1000;display:grid;grid-template-rows:1fr auto;place-items:center;background:rgba(18,17,16,.92);backdrop-filter:blur(14px);padding:24px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}.image-lightbox.open{opacity:1;visibility:visible}.lightbox-stage{min-width:0;min-height:0;width:100%;height:calc(100vh - 100px);display:grid;place-items:center;overflow:hidden;cursor:grab}.lightbox-stage:active{cursor:grabbing}.lightbox-image{max-width:92vw;max-height:calc(100vh - 130px);width:auto;height:auto;object-fit:contain;transform:scale(var(--zoom,1));transition:transform .2s ease;user-select:none;-webkit-user-drag:none}.lightbox-controls{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:14px}.lightbox-controls button,.lightbox-close{border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.09);color:#fff;border-radius:999px;min-width:42px;height:38px;padding:0 14px;cursor:pointer;font:12px var(--sans);transition:background .2s ease,transform .2s ease}.lightbox-controls button:hover,.lightbox-close:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}.lightbox-zoom-label{color:rgba(255,255,255,.8);font-size:10px;min-width:48px;text-align:center}.lightbox-close{position:absolute;top:18px;right:18px;width:42px;padding:0;font-size:22px}.lightbox-hint{color:rgba(255,255,255,.58);font-size:10px;letter-spacing:.04em;margin-left:8px}@media(prefers-reduced-motion:reduce){.main-media,.main-media img,.info,.gallery,.crumbs{animation:none!important;transition:none!important}}@media(max-width:900px){.nav{display:none}.header{grid-template-columns:1fr 1fr}.product-detail{grid-template-columns:1fr;gap:25px}.main-media{height:540px}.info{padding:0 0 20px}.related-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.shell{width:calc(100% - 36px)}.header{height:70px}.brand-name{font-size:11px}.main-media{height:430px;border-radius:18px}.product-detail{padding-bottom:70px}.info h1{font-size:53px}.related-grid{grid-template-columns:1fr 1fr}.related-card img{height:170px}.service-row{grid-template-columns:1fr}.announcement{font-size:7px}}
+
+.review-section{margin:20px 0 90px;padding:34px;background:var(--paper);border:1px solid var(--line);border-radius:20px}.review-section h2{font:500 38px var(--serif);margin:0 0 6px}.review-subtitle{font-size:11px;color:var(--muted);margin-bottom:22px}.review-summary{font-size:12px;padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:15px}.review-section{position:relative}.review-summary{position:absolute;right:calc(100% + 60px);top:88px;width:min(42vw,580px);margin:0 0 15px}.review-list{position:absolute;right:calc(100% + 60px);top:140px;width:min(42vw,580px);max-height:560px;overflow:auto;display:grid;gap:12px;padding-right:3px}.review-item{padding:17px;border:1px solid var(--line);border-radius:13px;background:#fff}.review-item strong{font-size:12px}.review-item .review-stars{color:var(--accent);letter-spacing:.08em;margin:6px 0}.review-item p{font-size:11px;line-height:1.7;color:#625c56;margin:0}.review-form{margin-top:25px;padding-top:24px;border-top:1px solid var(--line)}.review-form h3{font:500 26px var(--serif);margin:0 0 15px}.review-form label{display:grid;gap:7px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#82796f}.review-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.review-form input,.review-form select,.review-form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font:11px var(--sans);box-sizing:border-box}.review-form textarea{min-height:100px;resize:vertical;margin:12px 0}.review-submit{border:0;background:var(--ink);color:#fff;padding:14px 18px;border-radius:10px;font-size:9px;letter-spacing:.12em;cursor:pointer}.review-form #reviewStatus{font-size:10px;color:var(--muted)}@media(max-width:900px){.review-summary,.review-list{position:static;width:auto;max-height:none;overflow:visible}.review-summary{margin:0 0 15px}.review-list{padding-right:0}}@media(max-width:600px){.review-section{padding:20px}.review-fields{grid-template-columns:1fr}}
+
+/* AFTER editorial polish — product detail */
+:root{--ease-editorial:cubic-bezier(.22,.61,.36,1)}
+body{-webkit-font-smoothing:antialiased}
+.product-detail{animation:afterDetailIn .7s var(--ease-editorial) both}
+.gallery{perspective:1000px}
+.main-media{box-shadow:0 18px 48px rgba(44,34,25,.065);transition:box-shadow .55s var(--ease-editorial),transform .55s var(--ease-editorial);will-change:transform}
+.main-media:hover{box-shadow:0 26px 62px rgba(44,34,25,.12);transform:translateY(-2px)}
+.main-media img{transition:transform .8s var(--ease-editorial),filter .45s ease}
+.main-media:hover img{filter:saturate(1.035)}
+.thumbs button,.thumbs img{transition:transform .35s var(--ease-editorial),border-color .3s ease,box-shadow .3s ease}
+.thumbs button:hover,.thumbs img:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(35,28,22,.08)}
+.info>*{animation:afterDetailIn .65s var(--ease-editorial) both}
+.info>*:nth-child(2){animation-delay:60ms}.info>*:nth-child(3){animation-delay:110ms}.info>*:nth-child(4){animation-delay:160ms}
+.buy,.add,.primary,.review-submit{transition:transform .3s var(--ease-editorial),box-shadow .3s ease,background-color .3s ease}
+.buy:hover,.add:hover,.primary:hover,.review-submit:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(23,23,25,.12)}
+.related-card,.review-item{transition:transform .4s var(--ease-editorial),box-shadow .4s ease}
+.related-card:hover,.review-item:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(42,32,23,.07)}
+.image-lightbox{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lightbox-stage{animation:afterLightboxIn .28s ease both}
+@keyframes afterDetailIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes afterLightboxIn{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* AFTER V2 — premium product presentation */
+:root{--after-ease:cubic-bezier(.2,.75,.25,1)}
+body{background:radial-gradient(ellipse at 25% 15%,rgba(255,255,255,.58),transparent 46%),var(--bg)}
+.header{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.crumbs{letter-spacing:.18em;margin-bottom:4px}
+.product-detail{gap:clamp(32px,5vw,76px);padding-top:14px}
+.main-media{border:1px solid rgba(255,255,255,.65);border-radius:28px;box-shadow:0 24px 70px rgba(45,34,25,.12);animation:afterProductFloat 6s ease-in-out infinite;transition:box-shadow .55s var(--after-ease),transform .55s var(--after-ease)}
+.main-media:after{content:"";position:absolute;inset:auto 12% -13px;height:28px;border-radius:50%;background:rgba(45,34,25,.16);filter:blur(18px);z-index:0;opacity:.48;animation:afterShadowPulse 6s ease-in-out infinite;pointer-events:none}
+.main-media:hover{box-shadow:0 34px 82px rgba(45,34,25,.18)}
+.main-media img{transition:transform .9s var(--after-ease),filter .6s ease}
+.main-media:hover img{transform:scale(1.035);filter:saturate(1.06)}
+.thumbs .thumb{border-radius:14px;transition:transform .35s var(--after-ease),box-shadow .35s ease,border-color .3s ease}
+.thumbs .thumb:hover,.thumbs .thumb.active{box-shadow:0 9px 24px rgba(45,34,25,.1)}
+.info{padding-top:26px}
+.info h1{line-height:.98}
+.price{display:inline-block;margin-top:25px}
+.qty-row{border-top-color:rgba(23,23,25,.18)}
+.buy,.add{border-radius:3px;transition:transform .35s var(--after-ease),box-shadow .35s ease,background .3s ease}
+.buy:hover,.add:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(23,23,25,.16)}
+.service-row{border-top-color:rgba(23,23,25,.16)}
+.review-section{box-shadow:0 18px 48px rgba(43,33,25,.045);border-radius:22px;transition:box-shadow .4s ease}
+.review-section:hover{box-shadow:0 22px 58px rgba(43,33,25,.075)}
+@keyframes afterProductFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes afterShadowPulse{0%,100%{transform:scale(.92);opacity:.32}50%{transform:scale(1.06);opacity:.55}}
+@media(max-width:900px){.product-detail{gap:26px}.main-media{border-radius:20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* AFTER V3 — collector-style product presentation (presentation only) */
+:root{--bg:#f1ebe2;--paper:#fffdf9;--accent:#a87849;--editorial-ease:cubic-bezier(.2,.75,.25,1)}
+body{background:radial-gradient(ellipse at 18% 24%,rgba(255,255,255,.66),transparent 38rem),var(--bg);-webkit-font-smoothing:antialiased}
+.header{background:rgba(241,235,226,.78);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+.crumbs{font-size:8px;letter-spacing:.2em;text-transform:uppercase;padding:24px 0}.crumbs a:hover{color:var(--accent)}
+.product-detail{gap:clamp(32px,5vw,76px);align-items:start;padding-top:10px}.gallery{position:relative}.gallery:before{content:'THE AFTER EDIT';position:absolute;z-index:3;right:18px;bottom:98px;writing-mode:vertical-rl;font-size:8px;letter-spacing:.24em;color:rgba(23,23,25,.55);pointer-events:none}
+.main-media{height:clamp(470px,48vw,690px);border-radius:4px 28px 4px 28px;background:linear-gradient(145deg,#f5f0e9,#e3d9cd);border:1px solid rgba(255,255,255,.75);box-shadow:0 28px 65px rgba(47,39,31,.10),inset 0 0 0 8px rgba(255,255,255,.15);transition:box-shadow .45s,transform .45s var(--editorial-ease)}.main-media:after{content:'CLICK TO DISCOVER DETAILS';position:absolute;z-index:2;left:20px;bottom:18px;background:rgba(255,253,249,.78);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:9px 12px;font-size:7px;letter-spacing:.16em;pointer-events:none;transition:opacity .3s}.main-media:hover{box-shadow:0 36px 80px rgba(47,39,31,.16),inset 0 0 0 8px rgba(255,255,255,.2)}.main-media:hover:after{opacity:.65}.main-media img{mix-blend-mode:multiply}.thumbs{gap:12px;margin-top:15px}.thumb{border-radius:3px 12px 3px 12px;background:#e6ddd2}.thumb.active,.thumb:hover{border-color:var(--accent);box-shadow:0 8px 20px rgba(47,39,31,.08)}
+.info{position:sticky;top:28px;padding:clamp(18px,3vw,40px) 0}.tag{color:var(--accent);font-size:8px;letter-spacing:.25em}.info h1{font-size:clamp(48px,5.3vw,78px);line-height:.9;letter-spacing:-.07em;text-wrap:balance}.rating{font-size:10px}.description{font-size:12px;line-height:1.9;max-width:430px}.price{font-size:30px;letter-spacing:-.04em}.feature-title{font-size:8px;letter-spacing:.24em;color:var(--accent)}.features{line-height:2.2}.qty-row{border-top:1px solid rgba(23,23,25,.2);padding-top:20px}.qty-control{background:rgba(255,253,249,.55);padding:5px}.buy,.add{border-radius:2px;letter-spacing:.2em;min-height:51px}.buy{position:relative;overflow:hidden}.buy:before,.add:before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.16) 48%,transparent 72%);transform:translateX(-120%);transition:transform .7s}.buy:hover:before,.add:hover:before{transform:translateX(120%)}.buy:hover,.add:hover{background:var(--accent);box-shadow:0 15px 32px rgba(168,120,73,.18)}.service-row{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}.service-row>*{font-size:9px;letter-spacing:.03em}.review-section{border-radius:4px 22px 4px 22px;border:1px solid rgba(23,23,25,.1);background:rgba(255,253,249,.8);box-shadow:0 18px 48px rgba(47,39,31,.045);padding:clamp(22px,3vw,38px)}.review-section h2,.review-form h3{font-family:var(--serif);letter-spacing:-.045em}.related-card{border-radius:3px 15px 3px 15px;overflow:hidden}.related-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(47,39,31,.1)}
+@media(max-width:900px){.product-detail{gap:28px}.info{position:static;padding-top:8px}.main-media{height:clamp(380px,70vw,570px)}}
+@media(max-width:620px){.product-detail{padding-bottom:55px}.gallery:before{display:none}.main-media{border-radius:4px 18px 4px 18px}.info h1{font-size:48px}}
+@media(prefers-reduced-motion:reduce){.main-media,.main-media img,.thumb,.buy,.add,*{animation:none!important;transition:none!important}}
+
+
+/* AFTER: subtle floating product photography */
+.main-media img#mainImage{translate:0 0;animation:afterHeroProductFloat 7.2s ease-in-out infinite;will-change:translate}
+.main-media:hover img#mainImage{animation-play-state:paused}
+.related-card img{translate:0 0;animation:afterRelatedFloat 7.8s ease-in-out infinite;will-change:translate}
+.related-card:nth-child(2) img{animation-delay:-2.1s}
+.related-card:nth-child(3) img{animation-delay:-4.0s}
+.related-card:nth-child(4) img{animation-delay:-5.7s}
+@keyframes afterHeroProductFloat{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@keyframes afterRelatedFloat{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@media(prefers-reduced-motion:reduce){.main-media img#mainImage,.related-card img{animation:none!important;translate:0 0!important;will-change:auto}}
+
+/* AFTER — product editorial atmosphere */
+body{background-image:radial-gradient(ellipse at 12% 28%,rgba(205,177,147,.17),transparent 32%),radial-gradient(ellipse at 90% 76%,rgba(180,148,113,.11),transparent 30%);background-attachment:fixed}
+.header{background:rgba(244,239,232,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(25,24,22,.09)}
+.crumbs{font-size:10px!important;letter-spacing:.13em!important;text-transform:uppercase;color:var(--muted)!important;padding:22px 0!important}
+.product-detail{gap:clamp(28px,5vw,76px)!important}
+.main-media{border-radius:4px!important;background:linear-gradient(145deg,#f1e9df,#e3d8cb)!important;box-shadow:0 28px 70px rgba(47,36,25,.10),inset 0 0 0 1px rgba(255,255,255,.65)!important}
+.main-media:after{content:'AFTER / OBJECT STUDY';position:absolute;left:18px;bottom:18px;z-index:2;pointer-events:none;font-size:8px;letter-spacing:.2em;color:rgba(35,30,25,.62);padding:9px 11px;border:1px solid rgba(35,30,25,.18);background:rgba(255,253,249,.48);backdrop-filter:blur(8px)}
+.thumbs{gap:10px!important}.thumb{border-radius:3px!important;transition:transform .3s,border-color .3s,opacity .3s!important}.thumb:hover{transform:translateY(-3px)!important}
+.info{padding-top:clamp(4px,2vw,24px)!important}
+.category{letter-spacing:.2em!important;text-transform:uppercase!important}
+.description{line-height:1.9!important;color:#625b54!important}
+.price{letter-spacing:-.045em!important}
+.qty-control,.action,.buy{border-radius:3px!important;transition:transform .3s,background .3s,box-shadow .3s!important}
+.action:hover,.buy:hover{transform:translateY(-2px)!important;box-shadow:0 12px 26px rgba(25,24,22,.12)!important}
+.features{border-top:1px solid rgba(25,24,22,.15)!important;border-bottom:1px solid rgba(25,24,22,.15)!important}
+.related{padding-top:clamp(50px,7vw,90px)!important}
+.related h2,.review-section h2{letter-spacing:-.055em!important}
+.related-card{border-radius:4px!important;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s!important}
+.related-card:hover{transform:translateY(-7px)!important;box-shadow:0 22px 40px rgba(45,33,23,.12)!important}
+@media(prefers-reduced-motion:reduce){.thumb,.action,.buy,.related-card{transition:none!important;animation:none!important}}
+
+</style></head><body><div class="shell"><div class="announcement" id="announcement"></div><header class="header"><a class="brand" href="index.html"><svg class="mark home-logo-mark" viewBox="0 0 54 58" aria-hidden="true"><path d="M5 49 25 11 31 2 35 2 35 9 45 42Q47 48 53 49L53 52Q40 54 34 46L27 21 14 48Q11 53 5 52Z" fill="currentColor"/><path d="M4 49H15" stroke="currentColor" stroke-width="1.5"/></svg><span class="brand-name" id="brandName">AFTER</span></a><nav class="nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="categories.html">Categories</a><a href="blog.html">Blog</a><a href="about.html">About</a></nav><div class="actions"><a class="action" href="search.html">⌕</a><a class="action" href="account.html">♙</a><a class="bag" href="cart.html">BAG <span class="count" id="cartCount">0</span></a></div></header><div class="crumbs"><a href="shop.html">SHOP</a> / <span id="crumb"></span></div><main class="product-detail"><section class="gallery"><div class="floating-note" id="floatingNote">AFTER / EDIT 01</div><div class="main-media" id="mainMedia" role="button" tabindex="0" aria-label="Open product image for zoom"><img id="mainImage" alt=""></div><div class="thumbs" id="thumbs"></div></section><section class="info"><div class="tag" id="tag"></div><div class="category" id="category"></div><h1 id="name"></h1><div class="rating"><span class="stars">★★★★★</span><span id="rating"></span><span>·</span><span id="reviews"></span></div><p class="description" id="description"></p><div><span class="price" id="price"></span><span class="old" id="old"></span></div><div class="feature-title">Key features</div><ul class="features" id="features"></ul><div class="qty-row"><span>QUANTITY</span><div class="qty-control"><button type="button" id="qtyMinus">−</button><strong id="qtyValue">1</strong><button type="button" id="qtyPlus">+</button></div></div><button class="buy" id="buy">BUY NOW ↗</button><button class="add" id="add">ADD TO CART</button><div class="service-row"><div class="service"><strong>Fast delivery</strong>Carefully packed.</div><div class="service"><strong>Easy support</strong>Human help when needed.</div><div class="service"><strong>Secure checkout</strong>Ready for your backend.</div></div><section class="review-section" id="reviewSection"><h2>Reviews & ratings</h2><p class="review-subtitle">Real feedback from the AFTER community.</p><div id="reviewSummary" class="review-summary"></div><div id="reviewList" class="review-list"></div><form id="reviewForm" class="review-form"><h3>Share your experience</h3><div class="review-fields"><label>Your name<input id="reviewName" required minlength="2" maxlength="80" autocomplete="name"></label><label>Your rating<select id="reviewRating" required><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Very good</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Fair</option><option value="1">★☆☆☆☆ — Poor</option></select></label></div><label>Your review<textarea id="reviewText" required minlength="3" maxlength="2000" placeholder="What did you think about this product?"></textarea></label><button type="submit" class="review-submit">SUBMIT REVIEW ↗</button><p id="reviewStatus" role="status"></p></form></section></main><section class="related"><h2>You may also like.</h2><div class="related-grid" id="related"></div></section><footer style="border-top:1px solid var(--line);padding:28px 0 45px;color:#89827b;font-size:9px;display:flex;justify-content:space-between"><span>© AFTER</span><span>OBJECTS FOR WHAT’S NEXT.</span><a href="shop.html">BACK TO SHOP ↗</a></footer></div><div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Product image zoom"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image zoom">×</button><div class="lightbox-stage" id="lightboxStage"><img class="lightbox-image" id="lightboxImage" alt=""></div><div class="lightbox-controls"><button id="zoomOut" type="button" aria-label="Zoom out">−</button><span class="lightbox-zoom-label" id="zoomLabel">100%</span><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="zoomReset" type="button">RESET</button><span class="lightbox-hint">Scroll to zoom · Esc to close</span></div></div><div class="toast" id="toast">Added to your bag</div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="store-data.js"></script><script src="supabase-products.js"></script><script>
+(() => {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const S = getAfterStore();
+  const root = document.documentElement;
+  const announcementEl = $('announcement');
+  const brandNameEl = $('brandName');
+  const cartCountEl = $('cartCount');
+  const crumbEl = $('crumb');
+  const tagEl = $('tag');
+  const categoryEl = $('category');
+  const nameEl = $('name');
+  const ratingEl = $('rating');
+  const reviewsEl = $('reviews');
+  const descriptionEl = $('description');
+  const priceEl = $('price');
+  const oldEl = $('old');
+  const featuresEl = $('features');
+  const mainImageEl = $('mainImage');
+  const mainMediaEl = $('mainMedia');
+  const lightboxEl = $('imageLightbox');
+  const lightboxImageEl = $('lightboxImage');
+  const lightboxStageEl = $('lightboxStage');
+  const zoomLabelEl = $('zoomLabel');
+  let imageZoom = 1;
+  function syncLightboxImage() { if (lightboxImageEl && mainImageEl) { lightboxImageEl.src = mainImageEl.currentSrc || mainImageEl.src; lightboxImageEl.alt = mainImageEl.alt || 'Product image'; } }
+  function setImageZoom(next) { imageZoom = Math.max(1, Math.min(4, next)); if (lightboxImageEl) lightboxImageEl.style.setProperty('--zoom', imageZoom); if (zoomLabelEl) zoomLabelEl.textContent = `${Math.round(imageZoom * 100)}%`; }
+  function openImageLightbox() { if (!lightboxEl) return; syncLightboxImage(); setImageZoom(1); lightboxEl.classList.add('open'); document.body.style.overflow = 'hidden'; $('lightboxClose')?.focus(); }
+  function closeImageLightbox() { if (!lightboxEl) return; lightboxEl.classList.remove('open'); document.body.style.overflow = ''; mainMediaEl?.focus(); }
+  const thumbsEl = $('thumbs');
+  const relatedEl = $('related');
+  const buyBtn = $('buy');
+  const addBtn = $('add');
+  const toastEl = $('toast');
+
+  root.style.setProperty('--accent', S.accent || '#b9824c');
+  if (announcementEl) announcementEl.textContent = S.announcement || '';
+  if (brandNameEl) brandNameEl.textContent = S.brand || 'AFTER';
+
+  // Keep the home-page logo on the product page too.
+  if (S.logoImage) {
+    const mark = document.querySelector('.mark');
+    if (mark) {
+      const img = document.createElement('img');
+      img.src = S.logoImage;
+      img.className = 'logo-image';
+      img.alt = S.brand || 'AFTER';
+      mark.replaceWith(img);
+    }
+  }
+
+  let cart = JSON.parse(localStorage.getItem('afterCart') || '[]');
+  if (cartCountEl) cartCountEl.textContent = cart.length;
+
+  const id = new URLSearchParams(location.search).get('id') || S.products?.[0]?.id;
+  const product = (S.products || []).find(x => x.id === id) || S.products?.[0];
+  if (!product) {
+    location.href = 'shop.html';
+    return;
+  }
+
+  document.title = `${product.name} — AFTER`;
+  if (crumbEl) crumbEl.textContent = String(product.name || '').toUpperCase();
+  if (tagEl) tagEl.textContent = product.tag || 'AFTER EDIT';
+  if (categoryEl) categoryEl.textContent = product.category || '';
+  if (nameEl) nameEl.textContent = product.name || '';
+  if (ratingEl) ratingEl.textContent = product.rating || '4.8';
+  if (reviewsEl) reviewsEl.textContent = `${product.reviews || '0'} reviews`;
+  if (descriptionEl) descriptionEl.textContent = product.description || '';
+  if (priceEl) priceEl.textContent = product.price || '';
+  if (oldEl) oldEl.textContent = product.oldPrice || '';
+  if (featuresEl) {
+    featuresEl.innerHTML = (product.features || ['Thoughtfully selected for everyday use.'])
+      .map(x => `<li>${escapeHtml(x)}</li>`).join('');
+  }
+  const galleryImages = Array.isArray(product.images) && product.images.length ? product.images.filter(Boolean) : [product.image, product.image, product.image];
+  if (mainImageEl) {
+    mainImageEl.src = galleryImages[0] || product.image || '';
+    mainImageEl.alt = product.name || 'Product';
+  }
+  if (thumbsEl) {
+    thumbsEl.innerHTML = galleryImages.map((im, i) =>
+      `<button class="thumb ${i === 0 ? 'active' : ''}" type="button" data-image="${escapeAttr(im)}" aria-label="View ${i + 1}"><img src="${escapeAttr(im)}" alt="${escapeAttr(product.name)} view ${i + 1}"></button>`
+    ).join('');
+    thumbsEl.querySelectorAll('.thumb').forEach(btn => btn.addEventListener('click', () => {
+      mainImageEl.src = btn.dataset.image || galleryImages[0] || product.image;
+      mainImageEl.onload = () => { if (lightboxEl?.classList.contains('open')) syncLightboxImage(); };
+      thumbsEl.querySelectorAll('.thumb').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+    }));
+  }
+
+  mainMediaEl?.addEventListener('click', openImageLightbox);
+  mainMediaEl?.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openImageLightbox(); } });
+  $('lightboxClose')?.addEventListener('click', closeImageLightbox);
+  $('zoomIn')?.addEventListener('click', () => setImageZoom(imageZoom + .25));
+  $('zoomOut')?.addEventListener('click', () => setImageZoom(imageZoom - .25));
+  $('zoomReset')?.addEventListener('click', () => setImageZoom(1));
+  lightboxEl?.addEventListener('click', e => { if (e.target === lightboxEl) closeImageLightbox(); });
+  lightboxStageEl?.addEventListener('wheel', e => { if (!lightboxEl?.classList.contains('open')) return; e.preventDefault(); setImageZoom(imageZoom + (e.deltaY < 0 ? .15 : -.15)); }, { passive: false });
+  document.addEventListener('keydown', e => { if (!lightboxEl?.classList.contains('open')) return; if (e.key === 'Escape') closeImageLightbox(); if (e.key === '+' || e.key === '=') setImageZoom(imageZoom + .25); if (e.key === '-') setImageZoom(imageZoom - .25); });
+
+  function addToCart() {
+    cart.push(product.id);
+    localStorage.setItem('afterCart', JSON.stringify(cart));
+    localStorage.setItem('afterCartCount', String(cart.length));
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (toastEl) {
+      toastEl.textContent = `${product.name} added to your bag`;
+      toastEl.classList.add('show');
+      setTimeout(() => toastEl.classList.remove('show'), 1800);
+    }
+  }
+  let quantity = 1;
+  const qtyValue = $('qtyValue');
+  $('qtyMinus')?.addEventListener('click', () => { quantity = Math.max(1, quantity - 1); if(qtyValue) qtyValue.textContent = quantity; });
+  $('qtyPlus')?.addEventListener('click', () => { quantity = Math.min(99, quantity + 1); if(qtyValue) qtyValue.textContent = quantity; });
+  if (addBtn) addBtn.addEventListener('click', () => { for(let i=0;i<quantity;i++) addToCart(); });
+  if (buyBtn) buyBtn.addEventListener('click', () => { location.href = `checkout.html?product=${encodeURIComponent(product.id)}&qty=${quantity}`; });
+
+
+
+  // Cloud reviews are additive; product purchase/cart behavior remains unchanged.
+  (async function initReviews(){
+    const section=$('reviewSection'), form=$('reviewForm'), list=$('reviewList'), summary=$('reviewSummary'), status=$('reviewStatus');
+    if(!section||!window.afterSupabase)return;
+    try{
+      const {data:cfg}=await window.afterSupabase.from('site_content').select('content').eq('content_key','review_settings').maybeSingle();
+      const settings=cfg?.content||{};
+      const ratingsOn=settings.ratings_enabled!==false, reviewsOn=settings.reviews_enabled!==false;const topRating=document.querySelector('.rating');if(topRating)topRating.style.display=ratingsOn?'':'none';
+      if(!ratingsOn&&!reviewsOn){section.style.display='none';return;}
+      if(!ratingsOn){document.querySelector('label[for="reviewRating"]')?.remove();$('reviewRating').closest('label').style.display='none';}
+      if(!reviewsOn){$('reviewText').closest('label').style.display='none';}
+      if(!reviewsOn&&!ratingsOn)form.style.display='none';
+      async function load(){
+        const {data,error}=await window.afterSupabase.from('product_reviews').select('id,customer_name,rating,review_text,created_at').eq('product_id',String(product.id)).eq('is_approved',true).eq('is_visible',true).order('created_at',{ascending:false}).limit(100);
+        if(error)throw error;const rows=data||[];const avg=rows.length?rows.reduce((n,r)=>n+r.rating,0)/rows.length:0;
+        summary.textContent=rows.length?(ratingsOn?`★ ${avg.toFixed(1)} / 5 · ${rows.length} approved review${rows.length===1?'':'s'}`:`${rows.length} approved review${rows.length===1?'':'s'}`):'No approved reviews yet — be the first to share your experience.';
+        list.innerHTML=rows.map(r=>`<article class="review-item"><strong>${escapeHtml(r.customer_name)}</strong>${ratingsOn?`<div class="review-stars" aria-label="${r.rating} out of 5 stars">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div>`:''}<p>${reviewsOn?escapeHtml(r.review_text):''}</p></article>`).join('');
+      }
+      await load();
+      form.addEventListener('submit',async e=>{e.preventDefault();status.textContent='Submitting…';const payload={product_id:String(product.id),product_name:String(product.name||''),customer_name:$('reviewName').value.trim(),rating:ratingsOn?Number($('reviewRating').value):5,review_text:reviewsOn?$('reviewText').value.trim():'Rating submitted',is_approved:false,is_visible:true};
+        const {error}=await window.afterSupabase.from('product_reviews').insert(payload);if(error){status.textContent='Could not submit right now. Please try again later.';console.error(error);return;}form.reset();status.textContent='Thank you! Your review is saved and will appear after admin approval.';
+      });
+    }catch(e){console.warn('Reviews are not configured yet; run the supplied Supabase SQL migration.',e);status.textContent='Reviews are temporarily unavailable.';}
+  })();
+
+    if (relatedEl) {
+    relatedEl.innerHTML = (S.products || []).filter(x => x.id !== product.id).slice(0, 4).map(x =>
+      `<a class="related-card" href="product.html?id=${encodeURIComponent(x.id)}"><img src="${escapeAttr(x.image)}" alt="${escapeAttr(x.name)}"><div><small>${escapeHtml(x.category || '')}</small><strong>${escapeHtml(x.name || '')}</strong></div></a>`
+    ).join('');
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  }
+  function escapeAttr(value) { return escapeHtml(value); }
+})();
+</script></body></html>

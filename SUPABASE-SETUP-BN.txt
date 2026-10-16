@@ -1,0 +1,19 @@
+AFTER WEBSITE — SUPABASE CLOUD CHAT FIX (বাংলা)
+
+এই version customer chat-এ message database থেকে reload করে দেখায় এবং admin inbox-এ cloud conversation/reply support যোগ করে।
+
+১) Supabase Dashboard → Authentication → Sign In / Providers-এ Anonymous Sign-Ins enable করো।
+২) Authentication → Users → Add user দিয়ে admin-এর জন্য email/password user তৈরি করো (বা existing Auth user ব্যবহার করো)। Email/password মনে রাখো।
+৩) SQL Editor → New query-তে supabase-customer-messages.sql-এর সব SQL Run করো।
+৪) Authentication → Users-এ admin user-এর UUID copy করো। তারপর SQL Editor-এ চালাও:
+   insert into public.admin_users(user_id) values ('PASTE-ADMIN-USER-UUID-HERE') on conflict do nothing;
+   placeholder-এর জায়গায় আসল UUID বসাবে।
+৫) GitHub Pages-এ পুরো after-website folder-এর updated files upload/replace করো। supabase-config.js-এ শুধু project URL ও publishable key থাকবে; secret/service-role key কখনো নয়।
+৬) Customer website-এ CHAT খুলে message পাঠাও। Refresh করে দেখ—আগের conversation database থেকে load হবে।
+৭) Admin page → Customer Inbox-এ Supabase Auth email/password দিয়ে sign in করো। Admin user admin_users table-এ না থাকলে RLS access দেবে না। Conversation select করে reply পাঠালে reply customer-এর chat-এ দেখাবে।
+
+নোট: পুরোনো customer_messages table-এ user_id না থাকলে পুরোনো message স্বয়ংক্রিয়ভাবে নতুন customer session-এর সঙ্গে link হবে না। নতুন message থেকে cloud chat test করো। Existing old rows চাইলে manual migration করতে হবে। Browser-local পুরোনো chat-গুলো আলাদা এবং cloud-এ স্বয়ংক্রিয় import হয় না।
+
+
+নতুন Content / Review SQL:
+SUPABASE-CONTENT-REVIEWS-CATEGORIES-ABOUT-BLOG.sql ফাইলটি SQL Editor-এ রান করুন। এটি পুরোনো products/orders/payment table delete করে না। Admin থেকে cloud-এ save করতে Supabase Auth account দিয়ে sign in থাকতে হবে এবং account-টি public.admin_users table-এ authorized হতে হবে। Visitor review দিলে pending থাকবে; Admin > Reviews & Ratings থেকে approve করলে তবেই প্রকাশ হবে।

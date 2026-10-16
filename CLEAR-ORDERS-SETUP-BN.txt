@@ -1,0 +1,15 @@
+CLEAR MESSAGES — GitHub Pages + Supabase setup
+
+1) Supabase dashboard > SQL Editor খুলুন।
+2) এই ফোল্ডারের SUPABASE-CLEAR-ORDERS-SETUP.sql ফাইলের সম্পূর্ণ SQL কপি করে Run করুন।
+   এটি শুধু public.store_orders টেবিলে authorized admin delete permission যোগ করে। অন্য টেবিল পরিবর্তন করে না।
+3) after-website/admin.html এবং SUPABASE-CLEAR-ORDERS-SETUP.sql ফাইলটি আপনার GitHub repository-তে upload/commit করুন।
+4) GitHub Pages deploy শেষ হলে admin.html খুলুন। Customer Inbox-এ আপনার Supabase Auth admin account দিয়ে sign in করুন।
+5) CLEAR MESSAGES চাপুন > প্রথম confirmation-এ OK > Supabase admin password দিন > দ্বিতীয় confirmation-এ OK।
+6) Supabase থেকে store_orders-এর সব row delete সফল হলেই browser-এর local order cache-ও clear হবে। কোনো error হলে local cache clear হবে না।
+
+গুরুত্বপূর্ণ:
+- পাসওয়ার্ড কোডে লেখা নেই; Supabase Auth দিয়েই যাচাই হয়।
+- যে account দিয়ে sign in করবেন সেটি public.admin_users টেবিলে থাকতে হবে।
+- এই পরিবর্তন শুধু public.store_orders-এর order row মুছে। product, payment_methods, customer_messages, products, shop_settings বা অন্য table মুছে না।
+- payment proof storage files আলাদাভাবে delete করা হয় না।

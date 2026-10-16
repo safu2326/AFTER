@@ -1,0 +1,25 @@
+AFTER CUSTOM FOOTER / SOCIAL ICONS — বাংলা নির্দেশনা
+
+কী বদলেছে (শুধু footer অংশ):
+- Admin-এর বাম পাশের “Services / Footer” tab খুললেই “HOME PAGE FOOTER / SOCIAL ICONS” পাওয়া যাবে।
+- Footer tagline, copyright, নিচের লেখা, navigation link-এর নাম ও URL edit করা যাবে।
+- “+ ADD FOOTER LINK” দিয়ে link যোগ এবং প্রতিটি row-এর REMOVE দিয়ে মুছতে পারবে।
+- Social media icon-এর platform dropdown থেকে WhatsApp, Facebook, Instagram, X/Twitter, YouTube, TikTok, LinkedIn, Telegram, Discord, Pinterest বা Website/Other বেছে নেওয়া যাবে।
+- প্রতিটি social icon-এর URL আলাদা করে বসানো যাবে। URL ফাঁকা থাকলেও icon footer-এ দেখা যাবে; URL বসালে icon clickable হবে।
+- “LOAD FOOTER FROM CLOUD” cloud-এর বর্তমান footer settings দেখাবে।
+- “SAVE FOOTER SETTINGS TO CLOUD” শুধু footer-এর পাঁচটি setting Supabase-এ save করবে; অন্য shop settings, product, order বা customer message বদলাবে না।
+
+Setup:
+1. আগে বর্তমান GitHub repository-এর backup রাখো।
+2. ZIP extract করে after-website folder-এর updated files আগের একই path-এ upload/replace করো। index.html আগের মতো repository root-এ থাকবে।
+3. Supabase Dashboard > SQL Editor-এ SUPABASE-CUSTOM-FOOTER.sql-এর সম্পূর্ণ SQL run করো। Script পুনরায় চালানো যায়; এটি বিদ্যমান footer customization overwrite করে না এবং অন্য data delete করে না।
+4. Website Admin-এ Supabase Auth admin account দিয়ে Customer Inbox section-এ sign in করো।
+5. Admin > Services / Footer > LOAD FOOTER FROM CLOUD চাপো।
+6. Social platform নির্বাচন করো, নিজের Facebook/WhatsApp/X/Twitter page-এর URL বসাও, link add/remove করো।
+7. SAVE FOOTER SETTINGS TO CLOUD চাপো।
+8. Homepage-এ Ctrl+F5 দিয়ে refresh করে দেখো।
+
+নোট:
+- Social URL-এর উদাহরণ: https://facebook.com/yourpage অথবা WhatsApp-এর সম্পূর্ণ chat URL। নিজের সঠিক URL বসাতে হবে।
+- Icon-এর URL ফাঁকা থাকলে সেটি শুধু দৃশ্যমান থাকবে, কোনো page খুলবে না।
+- Supabase-এ save করতে হবে এমন account দিয়ে, যার Auth UUID public.admin_users table-এ আছে।

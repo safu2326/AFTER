@@ -1,0 +1,16 @@
+AFTER SHOP — PAYMENT METHODS + ORDERS SUPABASE SETUP (বাংলা)
+
+এই migration শুধু payment methods, orders এবং payment-proof upload-এর জন্য নতুন table/bucket/policy যোগ করে। Existing products, product images, shop settings, pages, cart UI বা checkout-এর ধাপ বদলানোর উদ্দেশ্য নেই।
+
+১) Supabase Dashboard → SQL Editor → New query খুলে SUPABASE-PAYMENTS-ORDERS-MIGRATION.sql ফাইলের সম্পূর্ণ SQL paste করে Run করো।
+২) নিশ্চিত করো public.admin_users টেবিলে তোমার Supabase Auth admin user-এর UUID আছে। আগে থেকেই Customer Inbox-এ cloud sign-in করলে একই account ব্যবহার করো।
+৩) ZIP-এর after-website folder-এর সব updated file GitHub repository-তে upload/replace করো।
+৪) Website-এর Admin page খোলো। Customer Inbox section-এ Supabase Auth email/password দিয়ে sign in করো। Payment Methods section প্রথমবার cloud table খালি পেলে admin browser-এর বর্তমান payment method settings Supabase-এ কপি করবে। তারপর SAVE PAYMENT METHODS চাপলে পরের পরিবর্তনগুলো Supabase-এ save হবে।
+৫) Checkout-এ enabled payment methods Supabase থেকে load হবে। Customer-এর আগের order form/checkout steps, product/quantity/total, transaction ID ও proof selection থাকবে। নতুন order Supabase-এর store_orders table-এ save হবে; proof image private payment-proofs Storage bucket-এ upload হবে।
+৬) Admin → Orders/Customer Messages section-এ cloud orders দেখা যাবে। Payment proof admin login থাকা অবস্থায় private signed link দিয়ে দেখা যাবে। Verify/Reject/Mark Read পরিবর্তন Supabase-এ save হবে।
+
+গুরুত্বপূর্ণ:
+- SQL existing products বা shop_settings টেবিল পরিবর্তন করে না।
+- পুরোনো browser localStorage-এ থাকা order SQL দিয়ে migrate হয় না; এই update deploy হওয়ার পরের নতুন order-গুলো cloud-এ যাবে।
+- GitHub-এ শুধু supabase-config.js-এর publishable key থাকতে পারে। service_role / secret key কখনো website code-এ বসাবে না।
+- Admin access-এর জন্য Supabase Auth user public.admin_users টেবিলে থাকতে হবে।

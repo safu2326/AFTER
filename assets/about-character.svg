@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" fill="none">
+<defs>
+ <radialGradient id="bg" cx="50%" cy="35%" r="75%"><stop stop-color="#2c2a2b"/><stop offset=".55" stop-color="#111113"/><stop offset="1" stop-color="#050506"/></radialGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1d2bc"/><stop offset="1" stop-color="#9e7564"/></linearGradient>
+ <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9d2c6"/><stop offset=".5" stop-color="#77736d"/><stop offset="1" stop-color="#27262a"/></linearGradient>
+ <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".45" stop-color="#c8a77d"/><stop offset="1" stop-color="#5d4631"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="700" height="900" rx="36" fill="url(#bg)"/>
+<circle cx="530" cy="180" r="125" fill="#b9824c" opacity=".10" filter="url(#glow)"/>
+<path d="M110 820C150 610 225 520 350 515c140-6 230 120 250 305H110Z" fill="url(#coat)"/>
+<path d="M255 510c-5-74 12-124 95-141 82-17 127 43 113 140l-36 81H290l-35-80Z" fill="url(#skin)"/>
+<path d="M240 380c-6-116 53-184 144-178 101 6 135 83 112 191-24-30-40-68-43-110-38 36-95 59-172 58-9 22-20 36-41 39Z" fill="#171518"/>
+<path d="M267 360c31-82 102-121 181-90 34 14 51 41 60 75-35-18-58-39-75-67-32 42-83 73-166 82Z" fill="#242126"/>
+<ellipse cx="316" cy="398" rx="8" ry="6" fill="#171719"/><ellipse cx="414" cy="398" rx="8" ry="6" fill="#171719"/>
+<path d="M340 454c28 18 54 18 80-1" stroke="#6d4e45" stroke-width="7" stroke-linecap="round"/>
+<path d="M286 512l-49 51 75 66 43-74 58 73 79-67-48-50-34 50h-86l-38-49Z" fill="#1b1a1d"/>
+<path d="M224 560c-53 34-78 83-92 150l108 46 63-151-79-45Z" fill="url(#coat)"/>
+<path d="M476 558c54 33 83 87 96 154l-113 42-59-149 76-47Z" fill="url(#coat)"/>
+<rect x="424" y="507" width="67" height="106" rx="20" transform="rotate(15 424 507)" fill="#151417" stroke="#d7c4ac" stroke-opacity=".45"/>
+<circle cx="458" cy="539" r="14" fill="#c8a77d" opacity=".85"/>
+<path d="M470 575l-28 24" stroke="#fff" stroke-opacity=".35" stroke-width="4"/>
+<path d="M200 744h300" stroke="#c8a77d" stroke-opacity=".2"/>
+<text x="52" y="78" fill="#fff" fill-opacity=".7" font-family="Arial" font-size="16" letter-spacing="5">AFTER / 01</text>
+<text x="52" y="835" fill="#fff" fill-opacity=".5" font-family="Arial" font-size="12" letter-spacing="4">OBJECTS FOR WHAT'S NEXT</text>
+</svg>

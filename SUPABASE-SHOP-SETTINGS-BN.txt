@@ -1,0 +1,14 @@
+AFTER SHOP SETTINGS — বাংলা সেটআপ
+
+১) Supabase Dashboard → SQL Editor → New query খুলুন।
+২) এই folder-এর supabase-shop-settings.sql ফাইলের সব SQL paste করে Run করুন।
+৩) এই SQL `shop_settings` table তৈরি করবে (আগের products/categories/orders table বদলাবে না)। Website-এর shop.html এবং admin.html একই Supabase project URL/key ব্যবহার করছে, তাই নতুন table-এর সঙ্গে connection code আগে থেকেই যোগ করা আছে।
+৪) Admin page-এ Customer Inbox-এ গিয়ে আপনার Supabase Auth email/password দিয়ে sign in করুন। আপনার Auth user-এর UUID public.admin_users টেবিলে থাকা চাই।
+৫) Admin page-এ “Shop Settings” খুলুন, Load Cloud Settings চাপুন, banner/hero/section/story/footer/trust fields বদলান এবং Save Shop Settings to Cloud চাপুন।
+৬) Shop page refresh করে দেখুন। Public visitors cloud settings পড়তে পারবে।
+
+গুরুত্বপূর্ণ:
+- SQL public read দেয়, কিন্তু write কেবল public.admin_users-এ থাকা authenticated admin-কে দেয়।
+- যদি `public.admin_users` table আগে তৈরি না করা থাকে, আগে আপনার existing admin setup SQL চালান।
+- Image URL হিসেবে public HTTPS image URL অথবা website-এর relative asset path ব্যবহার করুন। File upload/storage এই Shop Settings form-এ অন্তর্ভুক্ত নয়; image URL পরিবর্তন করা যায়।
+- GitHub Pages-এ updated ZIP-এর after-website folder-এর files upload/replace করুন। supabase-config.js-এ আপনার project URL ও publishable key অপরিবর্তিত রাখা হয়েছে।
